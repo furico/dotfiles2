@@ -26,6 +26,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'w0ng/vim-hybrid'
 
 call neobundle#end()
 
@@ -54,7 +55,10 @@ set hidden
 """"""""""""""""""""""""""""""""""""""""
 " カラースキーム
 """"""""""""""""""""""""""""""""""""""""
-colorscheme desert
+set background=dark
+autocmd ColorScheme * highlight LineNr ctermfg=darkgray guifg=darkgray
+autocmd ColorScheme * highlight VertSplit ctermfg=darkgray guifg=darkgray
+colorscheme hybrid
 
 """"""""""""""""""""""""""""""""""""""""
 " キーマップ
