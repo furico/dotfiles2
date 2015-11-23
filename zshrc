@@ -25,4 +25,4 @@ alias la='ls -al'
 alias -g L='| less'
 alias -g G='| grep'
 
-# vim:set ft=zsh :
+# vim:set filetype=zsh :
