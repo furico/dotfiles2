@@ -33,6 +33,21 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-colorscheme desert
+""""""""""""""""""""""""""""""""""""""""
+" 基本設定
+
+" 行番号を表示
+set number
+" 最下ウィンドウにステータスラインを常に表示
 set laststatus=2
+" コマンドラインウィンドウに使われる画面上の行数
 set cmdheight=2
+" コマンドを画面の最下行に表示する
+set showcmd
+" 変更中のファイルでも保存しないで他のファイルを表示
+set hidden
+
+
+""""""""""""""""""""""""""""""""""""""""
+" カラースキーム
+colorscheme desert
