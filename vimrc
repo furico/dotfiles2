@@ -56,9 +56,10 @@ set hidden
 " カラースキーム
 """"""""""""""""""""""""""""""""""""""""
 set background=dark
-autocmd ColorScheme * highlight LineNr ctermfg=darkgray guifg=darkgray
-autocmd ColorScheme * highlight VertSplit ctermfg=darkgray guifg=darkgray
-colorscheme hybrid
+colorscheme desert
+" autocmd ColorScheme * highlight LineNr ctermfg=darkgray guifg=darkgray
+" autocmd ColorScheme * highlight VertSplit ctermfg=darkgray guifg=darkgray
+" colorscheme hybrid
 
 """"""""""""""""""""""""""""""""""""""""
 " キーマップ
