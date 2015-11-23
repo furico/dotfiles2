@@ -25,4 +25,10 @@ alias la='ls -al'
 alias -g L='| less'
 alias -g G='| grep'
 
+########################################
+# 補完
+
+# 補完で小文字でも大文字にマッチさせる
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # vim:set filetype=zsh :
