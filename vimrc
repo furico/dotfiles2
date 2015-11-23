@@ -3,6 +3,9 @@ scriptencoding utf-8
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
 
+""""""""""""""""""""""""""""""""""""""""
+" プラグイン
+""""""""""""""""""""""""""""""""""""""""
 if has('vim_starting')
   if &compatible
     set nocompatible               " Be iMproved
@@ -35,7 +38,7 @@ NeoBundleCheck
 
 """"""""""""""""""""""""""""""""""""""""
 " 基本設定
-
+""""""""""""""""""""""""""""""""""""""""
 " 行番号を表示
 set number
 " 最下ウィンドウにステータスラインを常に表示
@@ -50,4 +53,23 @@ set hidden
 
 """"""""""""""""""""""""""""""""""""""""
 " カラースキーム
+""""""""""""""""""""""""""""""""""""""""
 colorscheme desert
+
+""""""""""""""""""""""""""""""""""""""""
+" キーマップ
+""""""""""""""""""""""""""""""""""""""""
+" Yで行末までヤンクする
+nnoremap Y y$
+" Enterで改行を挿入する
+noremap <CR> o<Esc>
+" <Esc>2回でハイライトOFF
+nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
+" コロンとセミコロンの入れ替え
+noremap ; :
+noremap : ;
+" 上下のカーソル移動を表示行で（物理行は<C-n><C-p>を使う）
+nnoremap j gj
+nnoremap k gk
+" C-jでノーマルモードに
+inoremap <C-j> <Esc>
