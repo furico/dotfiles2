@@ -1,4 +1,4 @@
-echo 'Load .zshrc...'
+echo 'Loading .zshrc...'
 
 # 環境変数
 export LANG=ja_JP.UTF-8
