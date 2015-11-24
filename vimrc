@@ -25,8 +25,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
+" ステータスラインをかっこ良くする
 NeoBundle 'itchyny/lightline.vim'
+" カラースキーム
 NeoBundle 'w0ng/vim-hybrid'
+" コメントアウトを効率化
+NeoBundle 'tomtom/tcomment_vim'
 
 call neobundle#end()
 
