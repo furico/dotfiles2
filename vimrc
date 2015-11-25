@@ -31,6 +31,8 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'w0ng/vim-hybrid'
 " コメントアウトを効率化
 NeoBundle 'tomtom/tcomment_vim'
+" tmux設定ファイル用
+NeoBundle 'tmux-plugins/vim-tmux'
 
 call neobundle#end()
 
