@@ -60,7 +60,6 @@ setopt hist_reduce_blanks
 
 ########################################
 # エイリアス
-alias ls='ls --color'
 alias ll='ls -l'
 alias la='ll -a'
 
