@@ -65,6 +65,11 @@ setopt hist_reduce_blanks
 # ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
 bindkey '^R' history-incremental-pattern-search-backward
 
+# 今の入力を元にコマンドライン履歴から補完する
+autoload -Uz history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+bindkey "^O" history-beginning-search-backward-end
+
 ########################################
 # エイリアス
 
