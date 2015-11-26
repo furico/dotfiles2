@@ -58,15 +58,25 @@ setopt hist_ignore_space
 # ヒストリに保存するときに余分なスペースを削除する
 setopt hist_reduce_blanks
 
+
+########################################
+# キーバインド
+
+# ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
+bindkey '^R' history-incremental-pattern-search-backward
+
 ########################################
 # エイリアス
+
 alias ll='ls -l'
 alias la='ll -a'
+
+# 全てのコマンドライン履歴からgrep
+alias ha='history -n 1 | grep'
 
 # グローバルエイリアス
 alias -g L='| less'
 alias -g G='| grep'
-
 
 ########################################
 # OS 別の設定
