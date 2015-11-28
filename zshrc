@@ -75,6 +75,7 @@ bindkey "^O" history-beginning-search-backward-end
 
 alias ll='ls -l'
 alias la='ll -a'
+alias sudo='sudo '
 
 # 全てのコマンドライン履歴からgrep
 alias ha='history -n 1 | grep'
