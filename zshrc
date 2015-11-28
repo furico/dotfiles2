@@ -1,4 +1,4 @@
-echo 'Loading .zshrc...'
+echo "Loading ${HOME}/.zshrc ..."
 
 ########################################
 # 環境変数
@@ -97,5 +97,14 @@ case ${OSTYPE} in
         export LS_COLORS='di=01;36:ln=01;35:so=01;32:ex=01;32:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
         ;;
 esac
+
+########################################
+# ローカル用の設定を読み込む
+
+ZSHRC_LOCAL="${HOME}/.localsettings/zshrc_local"
+if [ -e ${ZSHRC_LOCAL} ]; then
+    echo "Loading ${ZSHRC_LOCAL} ..."
+    source ${ZSHRC_LOCAL}
+fi
 
 # vim:set filetype=zsh :
