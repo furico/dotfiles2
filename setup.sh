@@ -1,7 +1,8 @@
 #!/bin/bash
 
-ln -sf ~/dotfiles/zshrc ~/.zshrc
-ln -sf ~/dotfiles/vimrc ~/.vimrc
-ln -sf ~/dotfiles/gvimrc ~/.gvimrc
-ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
-ln -sf ~/dotfiles/vim ~/.vim
+ln -sf $(pwd)/zshrc ${HOME}/.zshrc
+ln -sf $(pwd)/vimrc ${HOME}/.vimrc
+ln -sf $(pwd)/gvimrc ${HOME}/.gvimrc
+ln -sf $(pwd)/tmux.conf ${HOME}/.tmux.conf
+ln -sf $(pwd)/vim ${HOME}/.vim
+ln -sf $(pwd)/localsettings ${HOME}/.localsettings
