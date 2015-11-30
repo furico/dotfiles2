@@ -37,6 +37,8 @@ NeoBundle 'tmux-plugins/vim-tmux'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 " Pythonの自動補完
 NeoBundle 'davidhalter/jedi-vim'
+" 文法チェッカー
+NeoBundle 'scrooloose/syntastic'
 
 call neobundle#end()
 
@@ -105,3 +107,8 @@ augroup my-vimrc
   " 補完中にdocstringウィンドウをポップアップしない
   autocmd FileType python setlocal completeopt-=preview
 augroup END
+
+""""""""""""""""""""""""""""""""""""""""
+" scrooloose/syntastic
+
+let g:syntastic_python_checkers = ['python', 'flake8']
