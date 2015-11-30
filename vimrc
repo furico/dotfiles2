@@ -58,7 +58,10 @@ set cmdheight=2
 set showcmd
 " 変更中のファイルでも保存しないで他のファイルを表示
 set hidden
-
+" 検索結果をハイライト
+set hlsearch
+" 検索で大文字/小文字を区別しない
+set ignorecase
 
 """"""""""""""""""""""""""""""""""""""""
 " カラースキーム
