@@ -33,6 +33,8 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'tomtom/tcomment_vim'
 " tmux設定ファイル用
 NeoBundle 'tmux-plugins/vim-tmux'
+" ファジーファインダー
+NeoBundle 'ctrlpvim/ctrlp.vim'
 
 call neobundle#end()
 
@@ -84,3 +86,8 @@ nnoremap j gj
 nnoremap k gk
 " C-jでノーマルモードに
 inoremap <C-j> <Esc>
+
+""""""""""""""""""""""""""""""""""""""""
+" ctrlpvim/ctrlp.vim
+
+let g:ctrlp_cmd = 'CtrlPBuffer'
