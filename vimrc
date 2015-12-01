@@ -39,6 +39,8 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'davidhalter/jedi-vim'
 " 文法チェッカー
 NeoBundle 'scrooloose/syntastic'
+" インデントを見やすく
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 call neobundle#end()
 
@@ -112,3 +114,11 @@ augroup END
 " scrooloose/syntastic
 
 let g:syntastic_python_checkers = ['python', 'flake8']
+
+
+""""""""""""""""""""""""""""""""""""""""
+" nathanaelkane/vim-indent-guides
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 1
