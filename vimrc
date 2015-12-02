@@ -28,7 +28,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " ステータスラインをかっこ良くする
 NeoBundle 'itchyny/lightline.vim'
 " カラースキーム
-NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'nanotech/jellybeans.vim'
 " コメントアウトを効率化
 NeoBundle 'tomtom/tcomment_vim'
 " tmux設定ファイル用
@@ -72,6 +72,8 @@ set hlsearch
 set ignorecase
 " 検索パターンが大文字を含んでいたらオプション'ignorecase'を上書きする。
 set smartcase
+" インクリメンタルサーチ
+set incsearch
 " バックアップファイルとスワップファイルを作成しない
 set nobackup
 set nowritebackup
@@ -90,10 +92,7 @@ set t_vb=
 " カラースキーム
 
 set background=dark
-colorscheme desert
-" autocmd ColorScheme * highlight LineNr ctermfg=darkgray guifg=darkgray
-" autocmd ColorScheme * highlight VertSplit ctermfg=darkgray guifg=darkgray
-" colorscheme hybrid
+colorscheme jellybeans
 
 """"""""""""""""""""""""""""""""""""""""
 " キーマップ
@@ -112,6 +111,13 @@ nnoremap j gj
 nnoremap k gk
 " C-jでノーマルモードに
 inoremap <C-j> <Esc>
+
+""""""""""""""""""""""""""""""""""""""""
+" itchyny/lightline.vim
+
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
 
 """"""""""""""""""""""""""""""""""""""""
 " ctrlpvim/ctrlp.vim
@@ -142,3 +148,5 @@ let g:indent_guides_auto_colors = 1
 
 """"""""""""""""""""""""""""""""""""""""
 " vimwiki/vimwiki
+
+"let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
