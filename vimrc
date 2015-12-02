@@ -5,7 +5,7 @@ if 0 | endif
 
 """"""""""""""""""""""""""""""""""""""""
 " プラグイン
-""""""""""""""""""""""""""""""""""""""""
+
 if has('vim_starting')
   if &compatible
     set nocompatible               " Be iMproved
@@ -55,7 +55,7 @@ NeoBundleCheck
 
 """"""""""""""""""""""""""""""""""""""""
 " 基本設定
-""""""""""""""""""""""""""""""""""""""""
+
 " 行番号を表示
 set number
 " 最下ウィンドウにステータスラインを常に表示
@@ -70,10 +70,21 @@ set hidden
 set hlsearch
 " 検索で大文字/小文字を区別しない
 set ignorecase
+" バックアップファイルとスワップファイルを作成しない
+set nobackup
+set nowritebackup
+set noswapfile
+" アンドゥファイルを作成しない
+set noundofile
+" ターミナルでは256色を使用
+if !has('gui_running')
+  set t_Co=256
+endif
+
 
 """"""""""""""""""""""""""""""""""""""""
 " カラースキーム
-""""""""""""""""""""""""""""""""""""""""
+
 set background=dark
 colorscheme desert
 " autocmd ColorScheme * highlight LineNr ctermfg=darkgray guifg=darkgray
@@ -82,7 +93,7 @@ colorscheme desert
 
 """"""""""""""""""""""""""""""""""""""""
 " キーマップ
-""""""""""""""""""""""""""""""""""""""""
+
 " Yで行末までヤンクする
 nnoremap Y y$
 " Enterで改行を挿入する
