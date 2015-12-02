@@ -70,6 +70,8 @@ set hidden
 set hlsearch
 " 検索で大文字/小文字を区別しない
 set ignorecase
+" 検索パターンが大文字を含んでいたらオプション'ignorecase'を上書きする。
+set smartcase
 " バックアップファイルとスワップファイルを作成しない
 set nobackup
 set nowritebackup
