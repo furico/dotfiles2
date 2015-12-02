@@ -80,7 +80,9 @@ set noundofile
 if !has('gui_running')
   set t_Co=256
 endif
-
+" ビープ音に音もフラッシュも使わない
+set visualbell
+set t_vb=
 
 """"""""""""""""""""""""""""""""""""""""
 " カラースキーム
