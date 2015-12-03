@@ -42,7 +42,7 @@ NeoBundle 'scrooloose/syntastic'
 " インデントを見やすく
 NeoBundle 'nathanaelkane/vim-indent-guides'
 " 個人用wiki
-NeoBundle 'vimwiki/vimwiki'
+NeoBundle 'Rykka/riv.vim'
 
 call neobundle#end()
 
@@ -149,6 +149,7 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 1
 
 """"""""""""""""""""""""""""""""""""""""
-" vimwiki/vimwiki
+" Rykka/riv.vim
 
-"let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+" ファイルへのリンクをSphinxスタイルにする
+let g:riv_file_link_style = 2
