@@ -151,5 +151,8 @@ let g:indent_guides_auto_colors = 1
 """"""""""""""""""""""""""""""""""""""""
 " Rykka/riv.vim
 
+" projectへのパス
+let proj1 = { 'path': '~/riv_vim' }
+let g:riv_projects = [proj1]
 " ファイルへのリンクをSphinxスタイルにする
 let g:riv_file_link_style = 2
