@@ -156,3 +156,5 @@ let proj1 = { 'path': '~/riv_vim' }
 let g:riv_projects = [proj1]
 " ファイルへのリンクをSphinxスタイルにする
 let g:riv_file_link_style = 2
+" 自動折り畳みをOFF
+let g:riv_fold_auto_update = 0
