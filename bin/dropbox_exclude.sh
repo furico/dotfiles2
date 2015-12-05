@@ -16,3 +16,6 @@ for db_path in ${db_paths}; do
     python ${DROPBOX_PY} exclude add ${db_path}
   fi
 done
+
+RIV_VIM="${DROPBOX_DIR}/riv_vim"
+python ${DROPBOX_PY} exclude remove ${RIV_VIM}
