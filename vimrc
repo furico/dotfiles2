@@ -132,6 +132,13 @@ nnoremap j gj
 nnoremap k gk
 " C-jでノーマルモードに
 inoremap <C-j> <Esc>
+" tagsジャンプの時に複数ある時は一覧表示
+nnoremap <C-]> g<C-]>
+" F5でタグファイルを作成
+nnoremap <f5> :!ctags -R<CR>
+" 分割ウィンドウにtagジャンプ
+" http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
+nnoremap <A-]> :vsplit<CR>:exec("tag " . expand("<cword>"))<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 " itchyny/lightline.vim
