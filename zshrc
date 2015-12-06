@@ -88,6 +88,9 @@ alias sudo='sudo '
 # 全てのコマンドライン履歴からgrep
 alias ha='history -n 1 | grep'
 
+# ctags
+alias ct='ctags -R'
+
 # グローバルエイリアス
 alias -g L='| less'
 alias -g G='| grep'
