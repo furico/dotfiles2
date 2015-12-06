@@ -19,8 +19,3 @@ if [ ! -e ${HOME}/.localsettings ]; then
   ln -sf $(pwd)/localsettings ${HOME}/.localsettings
 fi
 ln -sf $(pwd)/bin ${HOME}
-
-# Dropbox
-if [ -e ${HOME}/Dropbox/riv_vim ]; then
-  ln -sf ${HOME}/Dropbox/riv_vim ${HOME}
-fi

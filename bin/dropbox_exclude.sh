@@ -17,5 +17,5 @@ for db_path in ${db_paths}; do
   fi
 done
 
-RIV_VIM="${DROPBOX_DIR}/riv_vim"
-python ${DROPBOX_PY} exclude remove ${RIV_VIM}
+DOC4VIM="${DROPBOX_DIR}/Doc4Vim"
+python ${DROPBOX_PY} exclude remove ${DOC4VIM}

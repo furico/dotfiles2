@@ -41,8 +41,12 @@ NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'scrooloose/syntastic'
 " インデントを見やすく
 NeoBundle 'nathanaelkane/vim-indent-guides'
+
 " 個人用wiki
-NeoBundle 'Rykka/riv.vim'
+let s:doc4vim_path = $HOME . '/Dropbox/Doc4Vim'
+if isdirectory(s:doc4vim_path)
+  NeoBundle 'Rykka/riv.vim'
+endif
 
 call neobundle#end()
 
@@ -166,10 +170,13 @@ let g:indent_guides_auto_colors = 1
 """"""""""""""""""""""""""""""""""""""""
 " Rykka/riv.vim
 
-" projectへのパス
-let proj1 = { 'path': '~/riv_vim' }
-let g:riv_projects = [proj1]
-" ファイルへのリンクをSphinxスタイルにする
-let g:riv_file_link_style = 2
-" 自動折り畳みをOFF
-let g:riv_fold_auto_update = 0
+let s:loaded_riv_vim = neobundle#get('riv.vim')
+if len(s:loaded_riv_vim)
+  " projectへのパス
+  let s:proj1 = { 'path': s:doc4vim_path . '/riv_vim' }
+  let g:riv_projects = [s:proj1]
+  " ファイルへのリンクをSphinxスタイルにする
+  let g:riv_file_link_style = 2
+  " 自動折り畳みをOFF
+  let g:riv_fold_auto_update = 0
+endif
