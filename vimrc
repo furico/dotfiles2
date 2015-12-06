@@ -41,6 +41,8 @@ NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'scrooloose/syntastic'
 " インデントを見やすく
 NeoBundle 'nathanaelkane/vim-indent-guides'
+" アウトラインビューア(ctagsが必要)
+NeoBundle 'majutsushi/tagbar'
 
 " 個人用wiki
 let s:doc4vim_path = $HOME . '/Dropbox/Doc4Vim'
@@ -135,7 +137,7 @@ inoremap <C-j> <Esc>
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
 " F5でタグファイルを作成
-nnoremap <f5> :!ctags -R<CR>
+nnoremap <F5> :!ctags -R<CR>
 " 分割ウィンドウにtagジャンプ
 " http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
 nnoremap <A-]> :vsplit<CR>:exec("tag " . expand("<cword>"))<CR>
@@ -187,3 +189,9 @@ if len(s:loaded_riv_vim)
   " 自動折り畳みをOFF
   let g:riv_fold_auto_update = 0
 endif
+
+
+""""""""""""""""""""""""""""""""""""""""
+" majutsushi/tagbar
+
+nnoremap <F8> :TagbarToggle<CR>
