@@ -90,6 +90,21 @@ set t_vb=
 " カーソル行を強調
 set cursorline
 
+" タブ・インデント関連
+
+" インデントに使われる空白の数
+set shiftwidth=2
+" タブが対応する空白の数
+set tabstop=2
+" タブの代わりに空白を使う
+set expandtab
+" タブ幅として使用する空白の数
+set softtabstop=2
+" インデントをshiftwidthの値の倍数に丸める
+set shiftround
+" 新しい行のインデントを現在の行と同じにする
+set autoindent
+
 """"""""""""""""""""""""""""""""""""""""
 " カラースキーム
 
