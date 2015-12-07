@@ -113,7 +113,7 @@ esac
 ########################################
 # ローカル用の設定を読み込む
 
-ZSHRC_LOCAL="${HOME}/.localsettings/zshrc_local"
+ZSHRC_LOCAL="${HOME}/settings/zshrc_local"
 if [ -e ${ZSHRC_LOCAL} ]; then
     echo "Loading ${ZSHRC_LOCAL} ..."
     source ${ZSHRC_LOCAL}

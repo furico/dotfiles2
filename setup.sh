@@ -15,7 +15,7 @@ ln -sf $(pwd)/ctags ${HOME}/.ctags
 if [ ! -e ${HOME}/.vim ]; then
   ln -sf $(pwd)/vim ${HOME}/.vim
 fi
-if [ ! -e ${HOME}/.localsettings ]; then
-  ln -sf $(pwd)/localsettings ${HOME}/.localsettings
+if [ ! -e ${HOME}/settings ]; then
+  ln -sf $(pwd)/settings ${HOME}/settings
 fi
 ln -sf $(pwd)/bin ${HOME}

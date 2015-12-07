@@ -1,5 +1,5 @@
 vim/bundle/
 *.swp
-localsettings/*
-!localsettings/*.example
+settings/*
+!settings/*.example
 .netrwhist
