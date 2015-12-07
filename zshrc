@@ -102,6 +102,11 @@ case ${OSTYPE} in
         # Mac用の設定
         export CLICOLOR=1
         alias ls='ls -G -F'
+        if [[ -d /Applications/MacVim.app ]]; then # MacVimが存在するならば
+            PATH="/Applications/MacVim.app/Contents/MacOS:$PATH"
+            alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
+            alias gvim=/Applications/MacVim.app/Contents/MacOS/mvim
+        fi
         ;;
     linux*)
         #Linux用の設定
