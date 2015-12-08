@@ -1,0 +1,8 @@
+scriptencoding utf-8
+
+" フォント
+set guifont=Ricty\ Regular:h16
+
+" ウィンドウの幅と高さ
+set columns=160
+set lines=50
