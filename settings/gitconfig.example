@@ -3,3 +3,5 @@
 	email = iorin@example.imas.com
 [core]
 	editor = vim -c \"set fileencoding=utf-8\"
+[alias]
+	st = status
