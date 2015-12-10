@@ -1,0 +1,5 @@
+[user]
+	name = Iori Minase
+	email = iorin@example.imas.com
+[core]
+	editor = vim -c \"set fileencoding=utf-8\"
