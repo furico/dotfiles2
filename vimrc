@@ -122,6 +122,10 @@ colorscheme jellybeans
 """"""""""""""""""""""""""""""""""""""""
 " キーマップ
 
+" LeaderをSpaceキーにする
+" http://postd.cc/how-to-boost-your-vim-productivity/
+let mapleader = "\<Space>"
+
 " Yで行末までヤンクする
 nnoremap Y y$
 " Enterで改行を挿入する
@@ -143,6 +147,10 @@ nnoremap <F5> :!ctags -R<CR>
 " 分割ウィンドウにtagジャンプ
 " http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
 nnoremap <A-]> :vsplit<CR>:exec("tag " . expand("<cword>"))<CR>
+
+" Leaderとの組み合わせ
+" 保存
+nnoremap <silent> <Leader>w :w<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 " itchyny/lightline.vim
