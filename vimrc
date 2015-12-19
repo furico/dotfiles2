@@ -97,6 +97,8 @@ set visualbell
 set t_vb=
 " カーソル行を強調
 set cursorline
+" モードラインを有効化
+set modeline
 
 " タブ・インデント関連
 

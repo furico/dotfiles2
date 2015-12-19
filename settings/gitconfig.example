@@ -3,5 +3,8 @@
 	email = iorin@example.imas.com
 [core]
 	editor = vim -c \"set fileencoding=utf-8\"
+	excludesfile = ~/settings/gitignore_global
 [alias]
 	st = status
+
+# vim:set ft=gitconfig:
