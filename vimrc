@@ -48,6 +48,7 @@ NeoBundle 'majutsushi/tagbar'
 let s:doc4vim_path = $HOME . '/Dropbox/Doc4Vim'
 if isdirectory(s:doc4vim_path)
   NeoBundle 'Rykka/riv.vim'
+  NeoBundle 'xolox/vim-notes'
 endif
 
 call neobundle#end()
