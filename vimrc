@@ -154,6 +154,8 @@ nnoremap <A-]> :vsplit<CR>:exec("tag " . expand("<cword>"))<CR>
 " Leaderとの組み合わせ
 " 保存
 nnoremap <silent> <Leader>w :w<CR>
+" vim-notes
+nnoremap <Leader>n :Note 
 
 """"""""""""""""""""""""""""""""""""""""
 " itchyny/lightline.vim
@@ -203,6 +205,13 @@ if len(s:loaded_riv_vim)
   let g:riv_fold_auto_update = 0
 endif
 
+""""""""""""""""""""""""""""""""""""""""
+" xolox/vim-notes
+let s:loaded_vim_notes = neobundle#get('vim-notes')
+if len(s:loaded_vim_notes)
+  let g:notes_directories = [s:doc4vim_path . '/vim_notes']
+  let g:notes_suffix = '.notes'
+endif
 
 """"""""""""""""""""""""""""""""""""""""
 " majutsushi/tagbar
