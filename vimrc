@@ -211,6 +211,8 @@ let s:loaded_vim_notes = neobundle#get('vim-notes')
 if len(s:loaded_vim_notes)
   let g:notes_directories = [s:doc4vim_path . '/vim_notes']
   let g:notes_suffix = '.notes'
+  " - などをUnicode文字に置換しない
+  let g:notes_unicode_enabled = 0
 endif
 
 """"""""""""""""""""""""""""""""""""""""
