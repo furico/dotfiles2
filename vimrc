@@ -153,7 +153,7 @@ nnoremap <A-]> :vsplit<CR>:exec("tag " . expand("<cword>"))<CR>
 
 " Leaderとの組み合わせ
 " 保存
-nnoremap <silent> <Leader>w :w<CR>
+nnoremap <silent> <Leader>w :update<CR>
 " vim-notes
 nnoremap <Leader>n :Note 
 
