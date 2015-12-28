@@ -115,6 +115,8 @@ set softtabstop=2
 set shiftround
 " 新しい行のインデントを現在の行と同じにする
 set autoindent
+" ファイルがVimの外部で変更されとき自動的に読み直す
+set autoread
 
 """"""""""""""""""""""""""""""""""""""""
 " カラースキーム
@@ -155,7 +157,19 @@ nnoremap <A-]> :vsplit<CR>:exec("tag " . expand("<cword>"))<CR>
 " 保存
 nnoremap <silent> <Leader>w :update<CR>
 " vim-notes
-nnoremap <Leader>n :Note 
+nnoremap <Leader>n :Note<Space>
+" ヘルプを縦分割で開く
+nnoremap <Leader>h :<C-u>vertical belowright help<Space>
+" カレントバッファのファイルをリロードする
+nnoremap <silent> <Leader>r :<C-u>call <SID>reload_file()<CR>
+function! s:reload_file()
+  edit!
+  echo 'Reloaded ' . @%
+endfunction
+" カレントバッファのパスを表示
+nnoremap <silent> <Leader>i :<C-u>echo @%<CR>
+" カレントバッファのフルパスを表示
+nnoremap <silent> <Leader>ii :<C-u>echo expand('%:p')<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 " itchyny/lightline.vim
