@@ -36,7 +36,7 @@ NeoBundle 'tmux-plugins/vim-tmux'
 " ファジーファインダー
 NeoBundle 'ctrlpvim/ctrlp.vim'
 " Pythonの自動補完
-NeoBundle 'davidhalter/jedi-vim'
+" NeoBundle 'davidhalter/jedi-vim'
 " 文法チェッカー
 NeoBundle 'scrooloose/syntastic'
 " インデントを見やすく
@@ -174,8 +174,8 @@ let g:ctrlp_cmd = 'CtrlPBuffer'
 
 augroup my-vimrc
   autocmd!
-  " 補完中にdocstringウィンドウをポップアップしない
-  autocmd FileType python setlocal completeopt-=preview
+  " " 補完中にdocstringウィンドウをポップアップしない
+  " autocmd FileType python setlocal completeopt-=preview
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""
