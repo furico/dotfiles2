@@ -80,6 +80,7 @@ bindkey "^O" history-beginning-search-backward-end
 
 ########################################
 # エイリアス
+alias vi=vim
 
 alias ll='ls -l'
 alias la='ll -a'
