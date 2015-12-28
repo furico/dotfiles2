@@ -43,6 +43,8 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 " アウトラインビューア(ctagsが必要)
 NeoBundle 'majutsushi/tagbar'
+" emmet
+NeoBundle 'mattn/emmet-vim'
 
 " 個人用wiki
 let s:doc4vim_path = $HOME . '/Dropbox/Doc4Vim'
