@@ -234,4 +234,4 @@ endif
 """"""""""""""""""""""""""""""""""""""""
 " majutsushi/tagbar
 
-nnoremap <F8> :TagbarToggle<CR>
+nnoremap <silent> <Leader>t :TagbarToggle<CR>
