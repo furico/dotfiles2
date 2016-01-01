@@ -235,3 +235,26 @@ endif
 " majutsushi/tagbar
 
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""
+" Open junk file
+" http://vim-jp.org/vim-users-jp/2010/11/03/Hack-181.html
+
+command! -nargs=0 JunkFile call s:open_junk_file(0)
+command! -nargs=0 JunkFileTab call s:open_junk_file(1)
+function! s:open_junk_file(flg)
+  let l:junk_dir = $HOME . '/junk_files' . strftime('/%Y%m')
+  if !isdirectory(l:junk_dir)
+    call mkdir(l:junk_dir, 'p')
+  endif
+
+  let l:filename = input('Junk Code: ', l:junk_dir . strftime('/%Y-%m-%d-%H%M%S.'))
+  if l:filename != ''
+    if a:flg
+      execute 'tabnew ' . l:filename
+    else
+      execute 'edit ' . l:filename
+    endif
+  endif
+endfunction
+nnoremap <Leader>j :JunkFile
