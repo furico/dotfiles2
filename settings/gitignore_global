@@ -2,3 +2,4 @@ venv/
 tags
 .idea/
 *.sqlite3
+*.db
