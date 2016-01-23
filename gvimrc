@@ -15,7 +15,11 @@ endif
 
 " 透過設定
 if has("kaoriya")
-  set transparency=20
+  if has('win32') || has('win64')
+    autocmd! GUIEnter * set transparency=230
+  else
+    set transparency=20
+  endif
 endif
 
 """"""""""""""""""""""""""""""""""""""""
