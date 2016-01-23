@@ -3,6 +3,9 @@ scriptencoding utf-8
 """"""""""""""""""""""""""""""""""""""""
 " 基本設定
 
+" ビープ音に音もフラッシュも使わない
+set vb t_vb=
+
 " クリップボードをOSと連携
 if has("unix") && !has("mac")
   set clipboard=unnamedplus
