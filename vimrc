@@ -13,7 +13,7 @@ if has('vim_starting')
 
   " Required:
   if has('win32') || has('win64')
-    set runtimepath+=~/.vimfiles/bundle/neobundle.vim/
+    set runtimepath+=~/vimfiles/bundle/neobundle.vim/
   else
     set runtimepath+=~/.vim/bundle/neobundle.vim/
   endif
