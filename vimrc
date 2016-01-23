@@ -12,11 +12,19 @@ if has('vim_starting')
   endif
 
   " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  if has('win32') || has('win64')
+    set runtimepath+=~/.vimfiles/bundle/neobundle.vim/
+  else
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+  endif
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+if has('win32') || has('win64')
+  call neobundle#begin(expand('~/vimfiles/bundle/'))
+else
+  call neobundle#begin(expand('~/.vim/bundle/'))
+endif
 
 " Let NeoBundle manage NeoBundle
 " Required:
