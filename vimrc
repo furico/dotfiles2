@@ -104,8 +104,7 @@ if !has('gui_running')
   set t_Co=256
 endif
 " ビープ音に音もフラッシュも使わない
-set visualbell
-set t_vb=
+set vb t_vb=
 " カーソル行を強調
 set cursorline
 " モードラインを有効化
