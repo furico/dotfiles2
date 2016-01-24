@@ -13,6 +13,9 @@ else
   set clipboard=unnamed
 endif
 
+" ツールバーを表示しない
+set guioptions-=T
+
 " 透過設定
 if has("kaoriya")
   if has('win32') || has('win64')
