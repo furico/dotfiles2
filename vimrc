@@ -158,8 +158,6 @@ nnoremap <A-]> :vsplit<CR>:exec("tag " . expand("<cword>"))<CR>
 " Leaderとの組み合わせ
 " 保存
 nnoremap <silent> <Leader>w :update<CR>
-" vim-notes
-nnoremap <Leader>n :Note<Space>
 " ヘルプを縦分割で開く
 nnoremap <Leader>h :<C-u>vertical belowright help<Space>
 " カレントバッファのファイルをリロードする
