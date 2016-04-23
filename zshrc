@@ -85,6 +85,7 @@ alias vi=vim
 alias ll='ls -l'
 alias la='ll -a'
 alias sudo='sudo '
+alias rm='rm -i'
 
 # 全てのコマンドライン履歴からgrep
 alias ha='history -n 1 | grep'
@@ -95,6 +96,26 @@ alias ct='ctags -R'
 # グローバルエイリアス
 alias -g L='| less'
 alias -g G='| grep'
+
+########################################
+# peco
+# Search shell history with peco: https://github.com/peco/peco
+# https://gist.github.com/yuttie/2aeaecdba24256c73bf2
+if which peco &> /dev/null; then
+  function peco_select_history() {
+    local tac
+    { which gtac &> /dev/null && tac="gtac" } || \
+      { which tac &> /dev/null && tac="tac" } || \
+      tac="tail -r"
+    BUFFER=$(fc -l -n 1 | eval $tac | \
+                peco --layout=top-down --query "$LBUFFER")
+    CURSOR=$#BUFFER # move cursor
+    zle -R -c       # refresh
+  }
+
+  zle -N peco_select_history
+  bindkey '^R' peco_select_history
+fi
 
 ########################################
 # OS 別の設定
