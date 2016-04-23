@@ -54,13 +54,6 @@ NeoBundle 'majutsushi/tagbar'
 " emmet
 NeoBundle 'mattn/emmet-vim'
 
-" 個人用wiki
-let s:doc4vim_path = $HOME . '/Dropbox/Doc4Vim'
-if isdirectory(s:doc4vim_path)
-  NeoBundle 'Rykka/riv.vim'
-  NeoBundle 'xolox/vim-notes', {'depends' : 'xolox/vim-misc' }
-endif
-
 call neobundle#end()
 
 " Required:
@@ -213,30 +206,6 @@ let g:syntastic_python_checkers = ['python', 'flake8']
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 1
-
-""""""""""""""""""""""""""""""""""""""""
-" Rykka/riv.vim
-
-let s:loaded_riv_vim = neobundle#get('riv.vim')
-if len(s:loaded_riv_vim)
-  " projectへのパス
-  let s:proj1 = { 'path': s:doc4vim_path . '/riv_vim' }
-  let g:riv_projects = [s:proj1]
-  " ファイルへのリンクをSphinxスタイルにする
-  let g:riv_file_link_style = 2
-  " 自動折り畳みをOFF
-  let g:riv_fold_auto_update = 0
-endif
-
-""""""""""""""""""""""""""""""""""""""""
-" xolox/vim-notes
-let s:loaded_vim_notes = neobundle#get('vim-notes')
-if len(s:loaded_vim_notes)
-  let g:notes_directories = [s:doc4vim_path . '/vim_notes']
-  let g:notes_suffix = '.notes'
-  " - などをUnicode文字に置換しない
-  let g:notes_unicode_enabled = 0
-endif
 
 """"""""""""""""""""""""""""""""""""""""
 " majutsushi/tagbar
